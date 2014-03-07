@@ -433,10 +433,9 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 }
 		 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(no_normal!=true)
+			
 			 total->Text = std_to_System_string(vec->print_out((vec->normal(sum))));
-			 else
-			 total->Text=std_to_System_string("Illegal operation!");
+			 
 
 		 }
 };
