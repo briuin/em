@@ -14,11 +14,5 @@ int main(array<System::String ^> ^args)
 
 	// Create the main window and run it
 	Application::Run(gcnew Form1());
-
-	//abc
-
-
-	//cool!!!
-
 	return 0;
 }
