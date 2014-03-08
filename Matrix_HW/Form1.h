@@ -9,6 +9,7 @@
 #include <string>
 #include <iostream>
 #include "Vec.h"
+#include "Addedfunc.h"
 
 namespace Matrix_HW {
 
@@ -19,6 +20,7 @@ namespace Matrix_HW {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	Vec *vec=new Vec();
+	Addedfunc *addedfunc=new Addedfunc();
 	bool no_normal;
 	vector<double> sum;
 	vector<vector<double>> temps;
@@ -108,19 +110,23 @@ namespace Matrix_HW {
 			// Matrix_listBox
 			// 
 			this->Matrix_listBox->FormattingEnabled = true;
-			this->Matrix_listBox->ItemHeight = 12;
-			this->Matrix_listBox->Location = System::Drawing::Point(10, 10);
+			this->Matrix_listBox->ItemHeight = 24;
+			this->Matrix_listBox->Location = System::Drawing::Point(22, 20);
+			this->Matrix_listBox->Margin = System::Windows::Forms::Padding(7, 6, 7, 6);
 			this->Matrix_listBox->Name = L"Matrix_listBox";
-			this->Matrix_listBox->Size = System::Drawing::Size(449, 400);
+			this->Matrix_listBox->Size = System::Drawing::Size(968, 796);
 			this->Matrix_listBox->TabIndex = 0;
+			this->Matrix_listBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::Matrix_listBox_SelectedIndexChanged);
 			// 
 			// groupBox1
 			// 
 			this->groupBox1->Controls->Add(this->OpenVector_button);
 			this->groupBox1->Controls->Add(this->OpenMatrix_button);
-			this->groupBox1->Location = System::Drawing::Point(10, 416);
+			this->groupBox1->Location = System::Drawing::Point(22, 832);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(7, 6, 7, 6);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(448, 296);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(7, 6, 7, 6);
+			this->groupBox1->Size = System::Drawing::Size(971, 592);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"OpenFile";
@@ -128,9 +134,10 @@ namespace Matrix_HW {
 			// OpenVector_button
 			// 
 			this->OpenVector_button->Dock = System::Windows::Forms::DockStyle::Top;
-			this->OpenVector_button->Location = System::Drawing::Point(3, 61);
+			this->OpenVector_button->Location = System::Drawing::Point(7, 121);
+			this->OpenVector_button->Margin = System::Windows::Forms::Padding(7, 6, 7, 6);
 			this->OpenVector_button->Name = L"OpenVector_button";
-			this->OpenVector_button->Size = System::Drawing::Size(442, 43);
+			this->OpenVector_button->Size = System::Drawing::Size(957, 86);
 			this->OpenVector_button->TabIndex = 8;
 			this->OpenVector_button->Text = L"Open_VectorFile";
 			this->OpenVector_button->UseVisualStyleBackColor = true;
@@ -139,9 +146,10 @@ namespace Matrix_HW {
 			// OpenMatrix_button
 			// 
 			this->OpenMatrix_button->Dock = System::Windows::Forms::DockStyle::Top;
-			this->OpenMatrix_button->Location = System::Drawing::Point(3, 18);
+			this->OpenMatrix_button->Location = System::Drawing::Point(7, 35);
+			this->OpenMatrix_button->Margin = System::Windows::Forms::Padding(7, 6, 7, 6);
 			this->OpenMatrix_button->Name = L"OpenMatrix_button";
-			this->OpenMatrix_button->Size = System::Drawing::Size(442, 43);
+			this->OpenMatrix_button->Size = System::Drawing::Size(957, 86);
 			this->OpenMatrix_button->TabIndex = 7;
 			this->OpenMatrix_button->Text = L"Open_MatrixFile";
 			this->OpenMatrix_button->UseVisualStyleBackColor = true;
@@ -161,10 +169,10 @@ namespace Matrix_HW {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Bold));
 			this->button1->ForeColor = System::Drawing::Color::Red;
-			this->button1->Location = System::Drawing::Point(659, 146);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Location = System::Drawing::Point(1428, 292);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(104, 45);
+			this->button1->Size = System::Drawing::Size(225, 90);
 			this->button1->TabIndex = 15;
 			this->button1->Text = L"caculate";
 			this->button1->UseVisualStyleBackColor = true;
@@ -172,32 +180,34 @@ namespace Matrix_HW {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(464, 158);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Location = System::Drawing::Point(1005, 316);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(190, 22);
+			this->textBox1->Size = System::Drawing::Size(407, 36);
 			this->textBox1->TabIndex = 14;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Form1::textBox1_TextChanged);
 			// 
 			// total
 			// 
 			this->total->AutoSize = true;
 			this->total->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(128)));
-			this->total->Location = System::Drawing::Point(780, 158);
-			this->total->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->total->Location = System::Drawing::Point(1690, 316);
+			this->total->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->total->Name = L"total";
-			this->total->Size = System::Drawing::Size(46, 20);
+			this->total->Size = System::Drawing::Size(90, 40);
 			this->total->TabIndex = 11;
 			this->total->Text = L"Sum";
 			this->total->UseMnemonic = false;
 			// 
 			// button2
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Adobe Gothic Std B", 12.25F, System::Drawing::FontStyle::Bold));
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F, System::Drawing::FontStyle::Bold));
 			this->button2->ForeColor = System::Drawing::Color::Red;
-			this->button2->Location = System::Drawing::Point(659, 211);
+			this->button2->Location = System::Drawing::Point(1428, 422);
+			this->button2->Margin = System::Windows::Forms::Padding(7, 6, 7, 6);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(104, 50);
+			this->button2->Size = System::Drawing::Size(225, 100);
 			this->button2->TabIndex = 16;
 			this->button2->Text = L"normalize";
 			this->button2->UseVisualStyleBackColor = true;
@@ -205,15 +215,16 @@ namespace Matrix_HW {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(13, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1022, 593);
+			this->ClientSize = System::Drawing::Size(2214, 1186);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->total);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->Matrix_listBox);
+			this->Margin = System::Windows::Forms::Padding(7, 6, 7, 6);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->groupBox1->ResumeLayout(false);
@@ -342,8 +353,10 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 double x;  //係數k
 				 bool minus=false; //負號  
 				 strcpy(sc,sa.c_str()); //字串轉到字元陣列
+				 strcpy(sc,(addedfunc->erase_space(sc)).c_str());
 				 char op='o';  //operation
 				 bool dot=false;
+				 bool error_detect=false;
 				 
 				 char cnow;  //a+b 的a
 				 /////////////http://1drv.ms/1n7J8BZ
@@ -437,6 +450,10 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 total->Text = std_to_System_string(vec->print_out((vec->normal(sum))));
 			 
 
+		 }
+private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void Matrix_listBox_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }
