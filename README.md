@@ -10,21 +10,21 @@ TODO:
 
 Multiple Vector support  (5%)
 
-dot of Vector (5%)
+dot of Vector (5%) --- R-Lai
 
-Vector addition (5%)
+Vector addition (5%) --- R-Lai
 
-Scalar Multiplication with vector (5%)
+Scalar Multiplication with vector (5%) ---R-Lai
 
-norm of Vector (5%)
+norm of Vector (5%) 
 
-Vector normalization (5%)
+Vector normalization (5%) --- xiou-hong
 
 cross product (5%)
 
-Component of a on b (5%)
+Component of a on b (5%)--- briuin
 
-Projection of a on b (5%)
+Projection of a on b (5%) --- briuin
 
 Triangle area (5%)
 
