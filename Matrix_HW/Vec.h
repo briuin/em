@@ -25,6 +25,9 @@ public:
 	void push(string str);  //字串存到S "(3,4,5)"
 	vector<double>Vec::normal(vector<double> ve); //normalize
 	vector<double>Vec::magnitude(vector<double> ve); //magnitude
+	double Vec::magnitude_to_double(vector<double> ve); //magnitude and return double
+	double Vec::comp(vector<double> va,vector<double> vb,char a,char b); //comp
+	vector<double> Vec::projection(vector<double> va,vector<double> vb,char a,char b); //projection
 	vector<double> pop(double a,char x);  //取出a倍向量
 	string print_out(vector<double> a);  //匯出向量成字串
 	double length(char x); //向量長度

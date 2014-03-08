@@ -238,3 +238,41 @@ vector<double>Vec::magnitude(vector<double> ve)
 	return nor ;
 
 }
+double Vec::magnitude_to_double(vector<double> ve)
+{
+	vector<double> nor;
+	double lengh,sum=0;
+	lengh = length(ve);
+	for(int i = 0 ; i<ve.size();i++)
+	{
+		sum+=pow(ve[i],2.0);
+		
+	}
+	sum=sqrt(sum);
+	return sum;
+
+}
+double Vec::comp(vector<double> va,vector<double> vb,char a,char b)
+{
+	vector<double> anstemp;
+	vector<vector<double>> anstemps;
+	double magb,ans;
+	magb=magnitude_to_double(vb);
+	magb=1/magb;
+	anstemp=pop(magb,b);
+	anstemps.push_back(va);
+	anstemps.push_back(anstemp);
+	ans=dot(anstemps);
+	return ans ;
+
+}
+vector<double> Vec::projection(vector<double> va,vector<double> vb,char a,char b)
+{
+	double compans,projans;
+	vector<double> proj;
+	compans=comp(va,vb,a,b);
+	projans=compans*(1/magnitude_to_double(vb));
+	proj=pop(projans,b);
+	return proj;
+
+}
