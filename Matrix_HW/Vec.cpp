@@ -223,3 +223,18 @@ vector<double>Vec::normal(vector<double> ve)
 	return nor ;
 
 }
+vector<double>Vec::magnitude(vector<double> ve)
+{
+	vector<double> nor;
+	double lengh,sum=0;
+	lengh = length(ve);
+	for(int i = 0 ; i<ve.size();i++)
+	{
+		sum+=pow(ve[i],2.0);
+		
+	}
+	sum=sqrt(sum);
+	nor.push_back(sum);
+	return nor ;
+
+}
