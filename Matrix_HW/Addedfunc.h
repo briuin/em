@@ -15,6 +15,7 @@ public:
 	
 	
 	string erase_space(string s);
+	string clearallstupidinput(string s);
 	Addedfunc();
 	~Addedfunc();
 };

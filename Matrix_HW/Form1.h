@@ -353,7 +353,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 double x;  //係數k
 				 bool minus=false; //負號  
 				 strcpy(sc,sa.c_str()); //字串轉到字元陣列
-				 strcpy(sc,(addedfunc->erase_space(sc)).c_str());
+				 strcpy(sc,(addedfunc->clearallstupidinput(sc)).c_str()); // right! that is clear all stupid input
 				 char op='o';  //operation
 				 bool dot=false;
 				 bool error_detect=false;
