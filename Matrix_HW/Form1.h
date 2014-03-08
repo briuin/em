@@ -393,7 +393,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 {
 						 
 					 } while (!(sc[c]!='+' || sc[c]!='\0'));*/
-					 cnow=sc[c++];  ///////存式 英文代號 :5a+2b的a或b
+					 cnow=sc[c++];  ///////存 英文代號 :5a+2b的a或b
 
 					 //////////執行運算
 						 switch(op)
@@ -408,7 +408,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 							case '-':  //decrease
 									temp=vec->dec(x,cnow,temp);
 									break;
-							case '*':
+							case '*': //dot
 									dot=true;
 									temp=vec->pop(x,cnow);
 									if(temps[0].size()==temp.size())
@@ -446,7 +446,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 }
 		 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			
+			////normalize
 			 total->Text = std_to_System_string(vec->print_out((vec->normal(sum))));
 			 
 
