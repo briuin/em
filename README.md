@@ -7,6 +7,7 @@ NTUST CSIE EM HOMEWORK
 TODO:
 
 <---Vector--->
+
 Multiple Vector support  (5%)
 
 dot of Vector (5%)
@@ -42,6 +43,7 @@ find orthonormal basis of the basis (15%)
 
 
 <---Matrix--->
+
 Multiple Matrix support 
 
 Matrix addition 
