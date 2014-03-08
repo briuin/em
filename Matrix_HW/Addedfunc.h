@@ -14,7 +14,7 @@ class Addedfunc
 public:
 	
 	
-	string erase_space(string s);
+	string erase_space(string s);   //清除字串空白處
 	Addedfunc();
 	~Addedfunc();
 };

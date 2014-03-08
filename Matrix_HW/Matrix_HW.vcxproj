@@ -86,6 +86,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Addedfunc.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="DotNetUitilities.cpp" />
     <ClCompile Include="Matrix_HW.cpp" />
@@ -96,6 +97,7 @@
     <ClCompile Include="Vec.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Addedfunc.h" />
     <ClInclude Include="DotNetUtilities.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>

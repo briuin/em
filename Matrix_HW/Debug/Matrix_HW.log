@@ -1,25 +1,35 @@
-﻿Build started 2014/3/8 上午 12:37:39.
-     1>Project "C:\Users\event1233134\Documents\em\Matrix_HW\Matrix_HW.vcxproj" on node 2 (build target(s)).
+﻿已經開始建置於 2014/03/08 16:23:52。
+     1>節點 2 (build 目標) 上的專案 "C:\Users\user\Desktop\工數-GIT\Matrix_HW\Matrix_HW.vcxproj"。
      1>InitializeBuildStatus:
-         Creating "Debug\Matrix_HW.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         由於指定了 "AlwaysCreate"，因此正在建立 "Debug\Matrix_HW.unsuccessfulbuild"。
        GenerateTargetFrameworkMonikerAttribute:
-       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       將略過目標 "GenerateTargetFrameworkMonikerAttribute"，因為所有輸出檔對於其輸入檔而言都已更新。
        ClCompile:
-         All outputs are up-to-date.
-         All outputs are up-to-date.
-         All outputs are up-to-date.
-       CoreResGen:
-         No resources are out of date with respect to their source files. Skipping resource generation.
-       ResourceCompile:
-         All outputs are up-to-date.
-       Link:
-         All outputs are up-to-date.
-         Matrix_HW.vcxproj -> C:\Users\event1233134\Documents\em\Debug\Matrix_HW.exe
-       FinalizeBuildStatus:
-         Deleting file "Debug\Matrix_HW.unsuccessfulbuild".
-         Touching "Debug\Matrix_HW.lastbuildstate".
-     1>Done Building Project "C:\Users\event1233134\Documents\em\Matrix_HW\Matrix_HW.vcxproj" (build target(s)).
+         所有輸出都是最新的。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Matrix_HW.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp DotNetUitilities.cpp Matrix_HW.cpp Vec.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
+     1>AssemblyInfo.cpp(1): fatal error C1093: API 呼叫 'ImportFile' 在 '0x80070003' 失敗 : ErrorMessage: 系統找不到指定的路徑。
+         
+         Description: 系統找不到指定的路徑。
+         HelpFile: complib.hlp
+         DotNetUitilities.cpp
+     1>DotNetUitilities.cpp(1): fatal error C1093: API 呼叫 'ImportFile' 在 '0x80070003' 失敗 : ErrorMessage: 系統找不到指定的路徑。
+         
+         Description: 系統找不到指定的路徑。
+         HelpFile: complib.hlp
+         Matrix_HW.cpp
+     1>Matrix_HW.cpp(3): fatal error C1093: API 呼叫 'ImportFile' 在 '0x80070003' 失敗 : ErrorMessage: 系統找不到指定的路徑。
+         
+         Description: 系統找不到指定的路徑。
+         HelpFile: complib.hlp
+         Vec.cpp
+     1>Vec.cpp(1): fatal error C1093: API 呼叫 'ImportFile' 在 '0x80070003' 失敗 : ErrorMessage: 系統找不到指定的路徑。
+         
+         Description: 系統找不到指定的路徑。
+         HelpFile: complib.hlp
+         正在產生程式碼...
+     1>專案 "C:\Users\user\Desktop\工數-GIT\Matrix_HW\Matrix_HW.vcxproj" (build 目標) 建置完成 -- 失敗。
 
-Build succeeded.
+建置失敗。
 
-Time Elapsed 00:00:00.10
+經過時間 00:00:02.09
