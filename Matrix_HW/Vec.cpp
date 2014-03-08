@@ -252,7 +252,7 @@ double Vec::magnitude_to_double(vector<double> ve)
 	return sum;
 
 }
-double Vec::comp(vector<double> va,vector<double> vb,char a,char b)
+double Vec::component(vector<double> va,vector<double> vb,char a,char b)
 {
 	vector<double> anstemp;
 	vector<vector<double>> anstemps;
@@ -270,7 +270,7 @@ vector<double> Vec::projection(vector<double> va,vector<double> vb,char a,char b
 {
 	double compans,projans;
 	vector<double> proj;
-	compans=comp(va,vb,a,b);
+	compans=component(va,vb,a,b);
 	projans=compans*(1/magnitude_to_double(vb));
 	proj=pop(projans,b);
 	return proj;
