@@ -7,6 +7,13 @@ Addedfunc::Addedfunc()
 
 }
 
+string Addedfunc::clearallstupidinput(string s)
+{
+	char temps[1000];
+	strcpy(temps,erase_space(s.c_str()).c_str()); // erase all blank
+
+	return temps;
+}
 
 string Addedfunc::erase_space(string s)
 {
