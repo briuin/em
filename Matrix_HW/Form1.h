@@ -516,6 +516,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 strcpy(sc,(addedfunc->clearallstupidinput(sc)).c_str()); // right! that is clear all stupid input
 				 char op='o';  //operation
 				 bool dot=false;
+				  bool cro=false;
 				 bool error_detect=false;
 				 
 				 char cnow;  //a+b 的a
@@ -579,6 +580,10 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 										return;
 									}
 									break;
+							case 'x':// 記得要宣告 cro 變數喔  俊豪這裡是外積呼叫  加上去吧
+								   cro = true;
+								   temp = vec->cross(x,cnow,temp);
+								   break;
 							
 						 }
 					 ////////////

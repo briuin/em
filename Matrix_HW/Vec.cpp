@@ -223,6 +223,25 @@ vector<double>Vec::normal(vector<double> ve)
 	return nor ;
 
 }
+vector<double>Vec::cross(double a , char x , vector<double> ve )
+{
+	vector<double> cro;
+	int index;
+	int div = ve.size();
+	if(x>='a')
+		index=x-'a';
+	else
+		index=x-'A';
+	if(S[index].size()!=ve.size()|| (unsigned)index>=S.size())
+		return cro;
+
+	for(int i =0 ;i<ve.size();i++)
+	{
+	  cro.push_back(S[index][(i+1)%div]*ve[(i+2)%div]-S[index][(i+2)%div]*ve[(i+1)%div]);
+	}
+
+	return cro;
+}
 vector<double>Vec::magnitude(vector<double> ve)
 {
 	vector<double> nor;

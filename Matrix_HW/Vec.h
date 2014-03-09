@@ -24,7 +24,8 @@ public:
 	vector<double> mult(double a,char x,vector<double> ve);*/
 	void push(string str);  //¶r¶Í¶s®ÏS "(3,4,5)"
 	vector<double>Vec::normal(vector<double> ve); //normalize
-	vector<double>Vec::magnitude(vector<double> ve); //magnitude
+	vector<double>cross(double a , char x , vector<double> ve );//cross
+	vector<double>Vec::magnitude(vector<double> ve); //magnitude and return vector
 	double Vec::magnitude_to_double(vector<double> ve); //magnitude and return double
 	double Vec::component(vector<double> va,vector<double> vb,char a,char b); //component
 	vector<double> Vec::projection(vector<double> va,vector<double> vb,char a,char b); //projection
