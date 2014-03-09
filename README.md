@@ -20,7 +20,7 @@ norm of Vector (5%)
 
 Vector normalization (5%) --- xiou-hong
 
-cross product (5%)
+cross product (5%) --- xiou-hong
 
 Component of a on b (5%)--- briuin
 
